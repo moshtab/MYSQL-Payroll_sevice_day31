@@ -1,4 +1,4 @@
-//uc1
+//uc1///////////////////////////////////////////////////////////
 mysql> CREATE DATABASE Adress_Book_Service;
 Query OK, 1 row affected (0.17 sec)
 
@@ -21,7 +21,7 @@ mysql> USE adress_book_service;
 Database changed
 mysql>
 
-//uc2
+//uc2/////////////////////////////////////////////////////////////
 mysql> CREATE TABLE adressbook(firstName varchar(20),lastName varchar(20),address varchar(20),city varchar(20),state varchar(20),zip int(10),phoneNUmber bigint(10),email varchar(40));
 Query OK, 0 rows affected, 2 warnings (1.85 sec)
 
@@ -40,7 +40,7 @@ mysql> describe adressbook;
 +-------------+-------------+------+-----+---------+-------+
 8 rows in set (0.00 sec)
 
-//uc3
+//uc3///////////////////////////////////////////////////////////////
 mysql>  INSERT INTO adressbook VALUES('Mohammad','Mohsin','Adharshnagar','Metpally','Telangana','505325','9908514276','mdmohsin41439@gmail.com');
 Query OK, 1 row affected (0.08 sec)
 
@@ -60,7 +60,7 @@ mysql> select * from adressbook;
 +-----------+----------+--------------+----------+-----------+--------+-------------+-------------------------+
 3 rows in set (0.00 sec)
 
-//uc4
+//uc4///////////////////////////////////////////////////////////////////////////
 mysql> update adressbook set firstName ='Abdul' where lastName = 'Sofyan';
 Query OK, 1 row affected (0.08 sec)
 Rows matched: 1  Changed: 1  Warnings: 0
@@ -75,7 +75,7 @@ mysql> select * from adressbook;
 +-----------+----------+--------------+----------+-----------+--------+-------------+-------------------------+
 3 rows in set (0.02 sec)
 
-//uc5
+//uc5//////////////////////////////////////////////////////////////////////////
 mysql> delete from adressbook where firstName = 'Abdul';
 Query OK, 1 row affected (0.35 sec)
 
@@ -89,7 +89,7 @@ mysql> select * from adressbook;
 2 rows in set (0.01 sec)
 
 
-//uc6
+//uc6//////////////////////////////////////////////////////////////////////////
 mysql> select lastName from adressBook where city = 'Metpally';
 +----------+
 | lastName |
@@ -108,7 +108,7 @@ mysql> select lastName from adressBook where city = 'Metpally' or state = 'telan
 +----------+
 2 rows in set (0.00 sec)
 
-//uc7
+//uc7////////////////////////////////////////////////////////////////////////////////////////////////////
 mysql> select COUNT(lastName) from adressBook where city = 'Metpally' and state = 'telangana';
 +-----------------+
 | COUNT(lastName) |
@@ -117,7 +117,7 @@ mysql> select COUNT(lastName) from adressBook where city = 'Metpally' and state 
 +-----------------+
 1 row in set (0.00 sec)
 
-//uc8
+//uc8////////////////////////////////////////////////////////////////////////////////////////////////////
 mysql> select * from adressBook order by lastName;
 +-----------+----------+--------------+----------+-----------+--------+-------------+-------------------------+
 | firstName | lastName | address      | city     | state     | zip    | phoneNumber | email                   |
@@ -127,7 +127,7 @@ mysql> select * from adressBook order by lastName;
 +-----------+----------+--------------+----------+-----------+--------+-------------+-------------------------+
 2 rows in set (0.00 sec)
 
-//uc9
+//uc9////////////////////////////////////////////////////////////////////////////////////////////
 mysql> alter table adressbook add family varchar(20);
 Query OK, 0 rows affected (0.69 sec)
 Records: 0  Duplicates: 0  Warnings: 0
@@ -179,7 +179,7 @@ mysql> select * from adressBook;
 +-----------+----------+--------------+----------+-----------+--------+-------------+-------------------------+--------+---------+-------------+----------+
 2 rows in set (0.00 sec)
 
-//uc10
+//uc10/////////////////////////////////////////////////////////////////////////////
 mysql> select COUNT(family) from adressBook;
 +---------------+
 | COUNT(family) |
@@ -188,7 +188,7 @@ mysql> select COUNT(family) from adressBook;
 +---------------+
 1 row in set (0.00 sec)
 
-//uc11
+//uc11//////////////////////////////////////////////////////////////////////////////
 
 mysql> update adressbook set brothers='Mohsin' where lastName ='Mohsin';
 Query OK, 1 row affected (0.14 sec)
